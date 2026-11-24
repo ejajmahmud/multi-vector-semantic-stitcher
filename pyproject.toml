@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-vector-semantic-stitcher"
+version = "0.1.0"
+description = "Recombines overlapping chunk vectors into continuous semantic text spans with boundary deduplication"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+multi-vector-semantic-stitcher = "multi_vector_semantic_stitcher.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["multi_vector_semantic_stitcher*"]
